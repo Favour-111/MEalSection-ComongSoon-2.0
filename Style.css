@@ -1,0 +1,250 @@
+:root {
+  --font: "Inter", sans-serif;
+  --shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.09);
+  --text-color: #181c14;
+  --default-color: #a4161bc0;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: 100%;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.nav {
+  background-color: white;
+  padding: 15px 30px;
+  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.19);
+  .logo {
+    img {
+      width: 200px;
+    }
+  }
+}
+.banner {
+  background: url("https://www.transparentpng.com/download/pattern/p3NBVZ-data-security-and-privacy-software-services-safe-data.png");
+  padding: 20px 30px;
+  position: relative;
+  color: white;
+  background-color: var(--default-color);
+  height: 300px;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  flex-direction: column;
+  .banner-head {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    z-index: 10000000;
+    position: relative;
+  }
+  .banner-content {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  .banner-img {
+    position: absolute;
+    right: -100px;
+    top: -150px;
+    img {
+      width: 500px;
+    }
+  }
+}
+.about-section {
+  padding: 30px;
+  .about-header {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    font-weight: 500;
+    color: #172b4d;
+  }
+  .about-header::after {
+    content: "";
+    height: 2px;
+    width: 40px;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    border-radius: 10px;
+    background-color: tomato;
+  }
+  .about-content {
+    font-size: 14px;
+    font-weight: 500;
+    color: #787878;
+    width: 70%;
+    margin-top: 20px;
+    line-height: 1.5;
+  }
+}
+.work-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.work-item {
+  width: 22%;
+  margin-top: 25px;
+  text-align: center;
+}
+.work-icn {
+  svg {
+    font-size: 35px !important;
+    color: #ffffff !important;
+  }
+}
+.work-desc {
+  font-size: 14px;
+  color: #787878;
+  margin-top: 10px;
+}
+.launch-head {
+  font-size: 40px;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  color: #fff;
+  font-weight: 600;
+}
+.work-text {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #172b4d;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.launch-body {
+  padding: 25px;
+}
+.content {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #fff;
+  opacity: 0.7;
+}
+.input {
+  margin-top: 20px;
+  input {
+    padding: 12px;
+    width: 400px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+  }
+  button {
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 14px 30px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: var(--default-color);
+    transition: 100ms;
+  }
+  button:hover {
+    opacity: 0.8;
+  }
+}
+.footer {
+  padding: 10px;
+  .footer-1 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
+.footer-body {
+  margin-top: 50px;
+  padding: 0 0 30px 0;
+  display: flex;
+  background: url("https://www.transparentpng.com/download/pattern/p3NBVZ-data-security-and-privacy-software-services-safe-data.png");
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  background-color: var(--default-color);
+}
+.email {
+  font-size: 13px;
+  color: #fff;
+  text-decoration: none;
+}
+.copyWrite {
+  font-size: 13px;
+  color: #ffffff;
+  margin-top: 10px;
+  opacity: 0.6;
+  font-weight: 500;
+}
+@media screen and (max-width: 800px) {
+  .work-container {
+    flex-wrap: wrap;
+  }
+  .work-item {
+    width: 45%;
+  }
+  .banner-img {
+    top: -50px !important;
+    img {
+      width: 300px !important;
+    }
+  }
+}
+@media screen and (max-width: 690px) {
+  /* .banner-img {
+    img {
+      width: 100px !important;
+    }
+  } */
+}
+@media screen and (max-width: 560px) {
+  .work-item {
+    width: 100%;
+  }
+  .about-section {
+    .about-content {
+      width: 100% !important;
+    }
+  }
+}
+@media screen and (max-width: 420px) {
+  .nav {
+    .logo {
+      img {
+        width: 150px;
+      }
+    }
+  }
+  .banner {
+    .banner-head {
+      font-size: 30px;
+    }
+  }
+  .launch-head {
+    font-size: 30px !important;
+  }
+  .input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    input {
+      width: 100%;
+    }
+    button {
+      font-size: 12px !important;
+      white-space: nowrap;
+    }
+  }
+}

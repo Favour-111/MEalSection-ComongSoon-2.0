@@ -2,7 +2,7 @@
   --font: "Inter", sans-serif;
   --shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.09);
   --text-color: #181c14;
-  --default-color: #a4161bc0;
+  --default-color: #a4161b;
 }
 * {
   padding: 0;
@@ -48,13 +48,17 @@ body {
     margin-top: 20px;
     font-size: 14px;
     opacity: 0.8;
+    position: relative;
+    z-index: 10000;
   }
   .banner-img {
-    position: absolute;
-    right: -100px;
-    top: -150px;
+    /* top: -150px; */
     img {
-      width: 500px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      object-fit: contain;
+      width: 200px;
     }
   }
 }
@@ -98,9 +102,9 @@ body {
   text-align: center;
 }
 .work-icn {
-  svg {
-    font-size: 35px !important;
-    color: #ffffff !important;
+  i {
+    font-size: 30px !important;
+    color: #172b4d !important;
   }
 }
 .work-desc {
@@ -132,6 +136,12 @@ body {
   margin-top: 10px;
   color: #fff;
   opacity: 0.7;
+}
+.content2 {
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #fff;
 }
 .input {
   margin-top: 20px;
@@ -193,16 +203,30 @@ body {
     flex-wrap: wrap;
   }
   .work-item {
+    margin-top: 40px;
     width: 45%;
   }
   .banner-img {
-    top: -50px !important;
     img {
-      width: 300px !important;
+      bottom: 0 !important;
+      right: -50px !important;
+      width: 250px !important;
     }
   }
 }
 @media screen and (max-width: 690px) {
+  .input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    input {
+      width: 80% !important;
+    }
+    button {
+      font-size: 12px !important;
+      white-space: nowrap;
+    }
+  }
   /* .banner-img {
     img {
       width: 100px !important;
@@ -212,6 +236,7 @@ body {
 @media screen and (max-width: 560px) {
   .work-item {
     width: 100%;
+    margin-top: 40px;
   }
   .about-section {
     .about-content {
@@ -234,17 +259,5 @@ body {
   }
   .launch-head {
     font-size: 30px !important;
-  }
-  .input {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    input {
-      width: 100%;
-    }
-    button {
-      font-size: 12px !important;
-      white-space: nowrap;
-    }
   }
 }

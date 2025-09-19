@@ -50,6 +50,18 @@ body {
     opacity: 0.8;
     position: relative;
     z-index: 10000;
+    .dot {
+      height: 4px;
+      width: 4px;
+      margin-top: 5px;
+      border-radius: 100%;
+      background-color: white;
+    }
+    .text {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
   }
   .banner-img {
     /* top: -150px; */
@@ -91,9 +103,9 @@ body {
     line-height: 1.5;
   }
 }
+
 .work-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 .work-item {
